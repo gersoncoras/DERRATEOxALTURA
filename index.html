@@ -635,25 +635,14 @@ return;
 FACTOR DE DERRATEO
 */
 
-
 let Ki;
 
-
 if(h<=1000){
-
     Ki=1;
-
 }
-
 else{
-
     Ki=Math.exp((h-1000)/8150);
-
 }
-
-
-
-
 
 /*
 Nivel original
@@ -684,12 +673,7 @@ let Vfd=nivelBase.vf*Ki;
 /*
 Buscar nuevo nivel necesario
 */
-
-
 let nivelSeleccionado=null;
-
-
-
 for(let n of nivelesIEC){
 
 
@@ -709,21 +693,13 @@ break;
 
 }
 
-
 }
-
-
-
-
 
 if(!nivelSeleccionado){
 
 nivelSeleccionado=nivelesIEC[nivelesIEC.length-1];
 
 }
-
-
-
 
 
 resultado.innerHTML=`
@@ -742,14 +718,9 @@ ${h} msnm
 
 <br>
 
-
 <b>Factor Ki:</b>
-
 ${Ki.toFixed(5)}
-
-
 <hr>
-
 
 <b>Tensión corregida:</b>
 
@@ -758,18 +729,14 @@ ${Ki.toFixed(5)}
 Vd = V × Ki
 
 <br>
-
 ${vn} × ${Ki.toFixed(5)}
-
 =
-
 <strong>${Vd.toFixed(3)} kV</strong>
-
-
 <hr>
 
 
-<b>Nivel inicial:</b>
+<b>Nivel inicial:
+(el inmediato superior a la Tensión nominal, según la tabla)</b>
 
 ${nivelBase.nivel} kV
 
